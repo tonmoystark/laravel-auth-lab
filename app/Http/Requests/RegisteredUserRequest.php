@@ -24,9 +24,9 @@ class RegisteredUserRequest extends FormRequest
     {
         return [
             //
-            'name' => 'required | string | max:255',
-            'email' => 'required | email | unique',
-            'password' => 'required | confirmed | min:8',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|confirmed|min:8',
         ];
     }
 }
