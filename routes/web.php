@@ -9,3 +9,7 @@ Route::get('/', function () {
 
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register.store');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
